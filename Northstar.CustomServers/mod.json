@@ -53,6 +53,10 @@
 		{
 			"Name": "ns_allow_kill_commands",
 			"DefaultValue": "0"
+		},
+		{
+			"Name": "ns_use_phase_fix",
+			"DefaultValue": "1"
 		}
 	],
 	"Scripts": [
@@ -150,6 +154,15 @@
 			"ServerCallback": {
 				"After": "AiTurretSentry_Init"
 			}
+		},
+
+		{
+			"Path": "gamemodes/_gamemode_fd_events.nut",
+			"RunOn": "( SERVER ) && MP"
+		},
+		{
+			"Path": "gamemodes/_gamemode_fd_nav.nut",
+			"RunOn": "( SERVER ) && MP"
 		}
 	]
 }
